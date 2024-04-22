@@ -6,7 +6,7 @@ app.post('/twiml/:number', (req, res) => {
     // Define your TwiML response
     const twimlResponse = `<?xml version="1.0" encoding="UTF-8"?>
 <Response>
-  <Dial>
+  <Dial record = "record-from-answer">
     <Number>+91${req.params.number}</Number>
   </Dial>
 </Response>`;
